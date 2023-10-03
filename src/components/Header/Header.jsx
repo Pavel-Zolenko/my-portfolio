@@ -18,7 +18,6 @@ import {
   NavMobile,
   NavItem,
   HeaderLogoLink,
-  LogoImg,
   HeaderName,
   Name,
   Box,
@@ -26,7 +25,7 @@ import {
   LogoDiv,
   NavLink,
 } from './Header.styled';
-import logo from '../../images/logo.jpeg';
+
 export const Header = () => {
   return (
     <HeaderWrap>
