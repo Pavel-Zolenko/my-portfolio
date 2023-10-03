@@ -1,11 +1,5 @@
 import { FaHtml5, FaSass } from 'react-icons/fa';
-import {
-  SiJavascript,
-  // SiMongodb,
-  // SiTypescript,
-  // SiNextdotjs,
-  // SiRedux,
-} from 'react-icons/si';
+import { SiJavascript } from 'react-icons/si';
 import { nanoid } from 'nanoid';
 import { foodsta, filmoteka, webstudio } from 'images';
 export const projectList = [
