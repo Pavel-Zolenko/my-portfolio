@@ -1,11 +1,5 @@
-import { FaReact, FaHtml5, FaSass, FaNodeJs } from 'react-icons/fa';
-import {
-  SiJavascript,
-  SiMongodb,
-  SiTypescript,
-  SiNextdotjs,
-  SiRedux,
-} from 'react-icons/si';
+import { FaHtml5, FaSass } from 'react-icons/fa';
+import { SiJavascript } from 'react-icons/si';
 import {
   ImgThumb,
   ProjectTitle,

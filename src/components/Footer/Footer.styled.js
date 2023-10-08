@@ -10,6 +10,7 @@ export const FooterWrap = styled.footer`
   color: ${colors.textMain};
   border-top: 1px solid lightgrey;
   background-color: #12141d;
+  z-index: 2;
 `;
 
 export const FooterContainer = styled(Container)`
@@ -18,14 +19,13 @@ export const FooterContainer = styled(Container)`
   justify-content: center;
   padding-top: 16px;
   padding-bottom: 16px;
-
   gap: 8px;
 `;
 
 export const FooterLink = styled.a`
   text-decoration: none;
   color: white;
-  transition: text-shadow 300ms ease-in;
+  transition: text-shadow 200ms ease-in;
   :hover {
     text-shadow: ${shadows.link};
   }

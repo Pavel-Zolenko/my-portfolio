@@ -5,6 +5,7 @@ import {
   FaHtml5,
   FaSass,
   FaNodeJs,
+  FaRegQuestionCircle,
 } from 'react-icons/fa';
 import {
   SiJavascript,
@@ -57,6 +58,12 @@ export const Header = () => {
             Certificate
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink href="#contacts" aria-label="contacts">
+            <FaRegQuestionCircle size={24} color="#fff" />
+            Contacts
+          </NavLink>
+        </NavItem>
       </Nav>
 
       <NavMobile>
@@ -68,6 +75,11 @@ export const Header = () => {
         <li>
           <NavLink href="#certificate">
             <FaCertificate size={24} color="#fff" />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink href="#contacts">
+            <FaRegQuestionCircle size={24} color="#fff" />
           </NavLink>
         </li>
       </NavMobile>
