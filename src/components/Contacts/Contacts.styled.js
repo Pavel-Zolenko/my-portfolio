@@ -27,6 +27,7 @@ export const ContactList = styled.ul`
     width: 100%;
   }
 `;
+
 export const ContactLink = styled.a`
   display: inline-flex;
   align-items: center;
@@ -52,20 +53,6 @@ export const ContactSpan = styled.span`
   }
 `;
 
-export const Input = styled.input`
-  width: 100%;
-  padding: 8px;
-  color: white;
-  background-color: ${colors.bcgLayout};
-
-  transition: box-shadow 200ms ease-in;
-  :hover,
-  :focus {
-    box-shadow: ${shadows.project};
-    outline: none;
-  }
-`;
-
 export const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
@@ -75,6 +62,40 @@ export const Form = styled.form`
   width: 100%;
   max-width: 520px;
   z-index: 2;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  color: white;
+  background-color: ${colors.bcgLayout};
+
+  border: none;
+  outline: 2px solid transparent;
+  background-image: linear-gradient(to bottom, #cacaca 1px, transparent 1px),
+    linear-gradient(to bottom, #cacaca 1px, transparent 1px),
+    linear-gradient(
+      to right,
+      #cacaca 1px,
+      transparent 1px,
+      transparent calc(100% - 1px),
+      #cacaca calc(100% - 1px)
+    ),
+    linear-gradient(to top, #cacaca 1px, transparent 1px);
+  background-position: -100% 0%, 200% 0%, 0% 100%, 0% 100%;
+  background-size: 50% 100%, 50% 100%, 100% 1px, 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease-out 0.6s,
+    background-position 0.6s ease-in, box-shadow 0.4s ease-in-out;
+
+  :hover,
+  :focus {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 0% 100%;
+    background-size: 51% 100%, 51% 100%, 100% 100%, 100% 100%;
+    transition: background-size 0.4s ease-in,
+      background-position 0.6s ease-out 0.4s;
+    box-shadow: ${shadows.project};
+  }
 `;
 
 export const TextArea = styled.textarea`

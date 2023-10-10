@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 import { FaTelegramPlane, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { MdOutlineEmail } from 'react-icons/md';
 import {
@@ -16,10 +18,38 @@ export const Contacts = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm({ defaultValues: { name: '', email_from: '', question: '' } });
+  } = useForm({ defaultValues: { name: '', email: '', question: '' } });
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    emailjs
+      .send(
+        'service_37bwe0x',
+        'template_8f95lo6',
+        {
+          name: data.name,
+          email: data.email,
+          message: data.question,
+        },
+        'KIKqVqW8O6Lyfm_X-'
+      )
+      .then(
+        response => {
+          toast.success('Thank you! Your message was sent successfully', {
+            style: {
+              borderRadius: '10px',
+              background: '#333',
+              color: '#fff',
+            },
+          });
+          reset();
+        },
+        err => {
+          toast.error('Sorry, your message failed, please try again later');
+        }
+      );
+  };
 
   return (
     <FormContainer id="contacts">
@@ -61,7 +91,7 @@ export const Contacts = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input {...register('name', { required: true })} placeholder="Name" />
         <Input
-          {...register('email_from', {
+          {...register('email', {
             required: true,
             pattern: /^\S+@\S+\.\S+$/,
           })}
