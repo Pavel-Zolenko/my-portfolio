@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { FaHtml5, FaSass } from 'react-icons/fa';
-import { SiJavascript } from 'react-icons/si';
 import {
   ImgThumb,
   ProjectTitle,
