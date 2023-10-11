@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FaHtml5, FaSass } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
 import {
@@ -9,24 +10,38 @@ import {
   BtnMore,
   Tech,
 } from './ProjectItem.styled.js';
+import { Modal } from '../Modal/Modal.jsx';
+import { ProjectCard } from '../ProjectCard/ProjectCard';
 
 export const ProjectItem = ({ project }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <li>
       <ImgThumb>
         <ProjectTitle>
           <Name>{project.name}</Name>
           <Tech>
-            <FaHtml5 size="24" name="HTML" />
-            <FaSass size="24" name="Sass" />
-            <SiJavascript size="24" name="JavaScript" />
+            {project.tech.map(el => (
+              <div key={el.type.name}>{el}</div>
+            ))}
           </Tech>
         </ProjectTitle>
 
         <ProjectImg src={project.image} alt={project.name} />
         <BoxButton>
-          <BtnMore>Learn More</BtnMore>
+          <BtnMore onClick={toggleModal}>Learn More</BtnMore>
         </BoxButton>
+
+        {showModal && (
+          <Modal onClose={toggleModal}>
+            <ProjectCard project={project} toggleModal={toggleModal} />
+          </Modal>
+        )}
       </ImgThumb>
     </li>
   );

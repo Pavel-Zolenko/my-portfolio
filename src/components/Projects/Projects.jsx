@@ -1,4 +1,4 @@
-import { projectList } from '../../data/projects.js';
+import { projectList } from 'data/projects';
 import { ProjectItem } from '../ProjectItem/ProjectItem.jsx';
 import { List, ProjectsContainer } from './Projects.styled.js';
 

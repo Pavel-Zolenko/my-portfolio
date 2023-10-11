@@ -7,12 +7,7 @@ import {
   FaNodeJs,
   FaRegQuestionCircle,
 } from 'react-icons/fa';
-import {
-  SiJavascript,
-  SiRedux,
-  SiTypescript,
-  SiNextdotjs,
-} from 'react-icons/si';
+import { SiJavascript, SiRedux, SiTypescript } from 'react-icons/si';
 import {
   HeaderWrap,
   Nav,
@@ -36,11 +31,13 @@ export const Header = () => {
         <Box>
           <Role>full-stack developer</Role>
           <LogoDiv>
-            <FaHtml5 size="20" /> <FaSass size="20" />
+            <FaHtml5 size="20" />
+            <FaSass size="20" />
             <SiJavascript size="20" />
             <SiTypescript size="20" />
-            <FaReact size="20" /> <SiNextdotjs size="20" />
-            <SiRedux size="20" /> <FaNodeJs size="20" />
+            <FaReact size="20" />
+            <SiRedux size="20" />
+            <FaNodeJs size="20" />
           </LogoDiv>
         </Box>
       </HeaderName>
