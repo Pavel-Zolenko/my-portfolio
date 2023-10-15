@@ -18,7 +18,6 @@ export const FormContainer = styled(Container)`
 
 export const ContactList = styled.ul`
   list-style: none;
-  z-index: 2;
 
   @media (max-width: 1279.98px) {
     display: flex;

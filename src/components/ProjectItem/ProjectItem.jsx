@@ -14,7 +14,7 @@ import { ProjectCard } from '../ProjectCard/ProjectCard';
 export const ProjectItem = ({ project }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const toggleModal = () => {
+  const toggleModal = e => {
     setShowModal(!showModal);
   };
 
