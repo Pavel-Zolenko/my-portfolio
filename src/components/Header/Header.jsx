@@ -20,12 +20,16 @@ import {
   Role,
   LogoDiv,
   NavLink,
+  Img,
 } from './Header.styled';
+import logo from 'images/logo.png';
 
 export const Header = () => {
   return (
     <HeaderWrap>
-      <HeaderLogoLink href="#">LOGO</HeaderLogoLink>
+      <HeaderLogoLink href="#">
+        <Img src={logo} alt="logo" />
+      </HeaderLogoLink>
       <HeaderName>
         <Name>Pavel Zolenko</Name>
         <Box>

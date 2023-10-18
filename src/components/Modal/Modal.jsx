@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import { Overlay, ModalWindow } from './Modal.styled';
+import { createPortal } from 'react-dom';
+
+const modalRoot = document.querySelector('#modal-root');
 
 export const Modal = ({ onClose, children }) => {
   useEffect(() => {
@@ -22,9 +25,10 @@ export const Modal = ({ onClose, children }) => {
     }
   };
 
-  return (
+  return createPortal(
     <Overlay onClick={handleBackdrop}>
       <ModalWindow>{children}</ModalWindow>
-    </Overlay>
+    </Overlay>,
+    modalRoot
   );
 };

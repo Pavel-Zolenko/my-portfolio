@@ -86,8 +86,18 @@ export const HeaderLogoLink = styled.a`
   align-items: center;
   height: 40px;
   text-decoration: none;
-  color: white;
+  border-radius: 50%;
+  :hover,
+  :focus {
+    box-shadow: ${shadows.link};
+  }
 `;
+
+export const Img = styled.img`
+  width: 40px;
+  height: 40px;
+`;
+
 export const LogoDiv = styled.div`
   display: flex;
   align-items: center;
