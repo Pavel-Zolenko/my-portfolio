@@ -87,6 +87,8 @@ export const HeaderLogoLink = styled.a`
   height: 40px;
   text-decoration: none;
   border-radius: 50%;
+  background-color: white;
+  transition: box-shadow 150ms ease-in;
   :hover,
   :focus {
     box-shadow: ${shadows.link};
@@ -102,8 +104,4 @@ export const LogoDiv = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`;
-
-export const LogoImg = styled.img`
-  object-fit: cover;
 `;
