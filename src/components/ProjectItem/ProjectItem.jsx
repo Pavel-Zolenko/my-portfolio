@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import {
-  ImgThumb,
   ProjectTitle,
-  Name,
   ProjectImg,
   BoxButton,
+  ImgThumb,
   BtnMore,
+  Name,
   Tech,
 } from './ProjectItem.styled.js';
 import { Modal } from '../Modal/Modal.jsx';

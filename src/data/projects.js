@@ -1,7 +1,9 @@
-import { FaReact, FaHtml5, FaSass } from 'react-icons/fa';
-import { SiJavascript } from 'react-icons/si';
 import { nanoid } from 'nanoid';
-import { foodsta, filmoteka, webstudio } from 'images';
+import { FaReact, FaHtml5, FaSass } from 'react-icons/fa';
+import { SiJavascript, SiRedux } from 'react-icons/si';
+
+import { foodsta, filmoteka, webstudio, phonebook } from 'images';
+import mui from 'images/mui.svg';
 
 export const projectList = [
   {
@@ -43,6 +45,23 @@ export const projectList = [
     github: 'https://github.com/Pavel-Zolenko/goit-react-hw-05-movies_1',
     image: filmoteka,
     descr1: 'Own project: website for searching movies and actors',
+    descr2:
+      'Adaptive layout with three breakpoints (480px, 768px, 1280px). Free themoviedb.org API is used as backend. Used libraries: emotions, react-router-dom, react-loader-spinner, axios. Favorites in Library and Photoalbum are persisted using localStorage',
+    descr3: 'Design: own. Assembly: Create React App',
+  },
+  {
+    id: nanoid(4),
+    name: 'Phonebook',
+    tech: [
+      <FaReact size="24" name="React" />,
+      <SiJavascript size="24" name="JavaScript" />,
+      <SiRedux size="24" name="JavaScript" />,
+      <img src={mui} alt="mui icon" width="24" height="24" />,
+    ],
+    link: 'https://pavel-zolenko.github.io/my-phonebook',
+    github: 'https://github.com/Pavel-Zolenko/my-phonebook',
+    image: phonebook,
+    descr1: '',
     descr2:
       'Adaptive layout with three breakpoints (480px, 768px, 1280px). Free themoviedb.org API is used as backend. Used libraries: emotions, react-router-dom, react-loader-spinner, axios. Favorites in Library and Photoalbum are persisted using localStorage',
     descr3: 'Design: own. Assembly: Create React App',
