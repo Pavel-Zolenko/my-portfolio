@@ -61,9 +61,9 @@ export const projectList = [
     link: 'https://pavel-zolenko.github.io/my-phonebook',
     github: 'https://github.com/Pavel-Zolenko/my-phonebook',
     image: phonebook,
-    descr1: '',
+    descr1: 'Own project: website for saving contacts in a phonebook',
     descr2:
-      'Adaptive layout with three breakpoints (480px, 768px, 1280px). Free themoviedb.org API is used as backend. Used libraries: emotions, react-router-dom, react-loader-spinner, axios. Favorites in Library and Photoalbum are persisted using localStorage',
+      'Adaptive layout with three breakpoints (480px, 768px, 1280px). Used libraries: emotions, react-router-dom, materialUI, redux, axios. The application saves contact data on the backend.',
     descr3: 'Design: own. Assembly: Create React App',
   },
 ];
