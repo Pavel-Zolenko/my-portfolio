@@ -41,8 +41,8 @@ export const projectList = [
       <SiJavascript size="24" name="JavaScript" />,
       <FaReact size="24" name="React" />,
     ],
-    link: 'https://pavel-zolenko.github.io/goit-react-hw-05-movies_1',
-    github: 'https://github.com/Pavel-Zolenko/goit-react-hw-05-movies_1',
+    link: 'https://pavel-zolenko.github.io/my-movies',
+    github: 'https://github.com/Pavel-Zolenko/my-movies',
     image: filmoteka,
     descr1: 'Own project: website for searching movies and actors',
     descr2:
