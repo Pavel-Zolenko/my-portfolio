@@ -24,8 +24,8 @@ export const ProjectItem = ({ project }) => {
         <ProjectTitle>
           <Name>{project.name}</Name>
           <Tech>
-            {project.tech.map(el => (
-              <div key={el.type.name}>{el}</div>
+            {project.tech.map((el, idx) => (
+              <div key={idx}>{el}</div>
             ))}
           </Tech>
         </ProjectTitle>

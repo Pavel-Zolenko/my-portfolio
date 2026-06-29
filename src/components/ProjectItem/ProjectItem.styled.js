@@ -4,8 +4,10 @@ const { colors, shadows } = theme;
 
 export const ImgThumb = styled.div`
   position: relative;
+  width: 100%;
   max-width: 360px;
-  max-height: 240px;
+  height: 100%;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
 `;
 
@@ -36,9 +38,11 @@ export const Name = styled.h4`
 `;
 
 export const ProjectImg = styled.img`
+  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 `;
 
 export const BoxButton = styled.div`

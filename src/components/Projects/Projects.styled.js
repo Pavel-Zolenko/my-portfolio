@@ -10,6 +10,6 @@ export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
   background-color: #12141d;
 `;
